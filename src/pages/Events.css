@@ -1,0 +1,15 @@
+.Events-section {
+  padding: 3rem 2rem;
+}
+
+.Events-section h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--primary-blue);
+}
+
+.Events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}

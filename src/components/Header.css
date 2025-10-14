@@ -1,0 +1,41 @@
+.header {
+  background: linear-gradient(90deg, var(--primary-blue), var(--secondary-orange));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  color: var(--white);
+}
+
+.header-logo h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.header-nav a {
+  margin: 0 1rem;
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.header-nav a:hover {
+  color: var(--black);
+}
+
+.header-buttons .donate-btn {
+  background-color: var(--white);
+  color: var(--primary-blue);
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.header-buttons .donate-btn:hover {
+  background-color: var(--black);
+  color: var(--white);
+}

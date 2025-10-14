@@ -1,0 +1,39 @@
+.footer {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 2rem;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-about h4 {
+  color: var(--secondary-orange);
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a,
+.footer-social a {
+  display: block;
+  color: var(--white);
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover,
+.footer-social a:hover {
+  color: var(--secondary-orange);
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 1rem;
+}

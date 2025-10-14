@@ -1,0 +1,40 @@
+.home-hero {
+  background: linear-gradient(90deg, var(--primary-blue), var(--secondary-orange));
+  color: var(--white);
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.home-hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.home-hero p {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+}
+
+.home-hero button {
+  background-color: var(--white);
+  color: var(--primary-blue);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-top: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.home-hero button:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.home-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 3rem 2rem;
+}

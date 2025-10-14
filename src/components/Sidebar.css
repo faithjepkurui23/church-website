@@ -1,0 +1,36 @@
+.sidebar {
+  background-color: var(--primary-blue);
+  color: var(--white);
+  width: 250px;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.sidebar h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  margin-bottom: 1rem;
+}
+
+.sidebar a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.sidebar a:hover {
+  color: var(--secondary-orange);
+}
+
