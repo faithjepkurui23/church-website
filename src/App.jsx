@@ -1,67 +1,118 @@
-
 import React from "react";
-import { Routes, Route } from "react-router-dom";
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
 
-
 import Home from "./pages/Home";
-import Dashboard from "./pages/Dashboard";
+import About from "./pages/About";
 import Sermons from "./pages/Sermons";
 import Events from "./pages/Events";
-import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   return (
-    <div className="app-container">
-     
-      <Header />
+    <Router>
+      <Routes>
+       
+        <Route
+          path="/"
+          element={
+            <>
+              <Header />
+              <div className="main-content">
+                <Home />
+              </div>
+              <Footer />
+            </>
+          }
+        />
 
-      <div className="main-content">
         
-        <Sidebar />
+        <Route
+          path="/home"
+          element={
+            <>
+              <Header />
+              <div className="main-content">
+                <Home />
+              </div>
+              <Footer />
+            </>
+          }
+        />
 
         
-        <div className="page-content">
-          <Routes>
-            
-            <Route
-              path="/"
-              element={
-                <div className="app-main">
-                  <h1>Welcome to Our Church Website</h1>
-                  <p>“A place of worship, community, and love.”</p>
-                  <p>This is the starting point of your beautiful church website.</p>
-                </div>
-              }
-            />
+        <Route
+          path="/about"
+          element={
+            <>
+              <Header />
+              <div className="main-content">
+                <About />
+              </div>
+              <Footer />
+            </>
+          }
+        />
 
-            
-            <Route path="/dashboard" element={<Dashboard />} />
+        
+        <Route
+          path="/events"
+          element={
+            <>
+              <Header />
+              <div className="main-content">
+                <Events />
+              </div>
+              <Footer />
+            </>
+          }
+        />
 
-            
-            <Route path="/sermons" element={<Sermons />} />
+        
+        <Route
+          path="/sermons"
+          element={
+            <>
+              <Header />
+              <div className="main-content">
+                <Sermons />
+              </div>
+              <Footer />
+            </>
+          }
+        />
 
-            
-            <Route path="/events" element={<Events />} />
+        <Route
+          path="/contact"
+          element={
+            <>
+              <Header />
+              <div className="main-content">
+                <Contact />
+              </div>
+              <Footer />
+            </>
+          }
+        />
 
-            
-            <Route path="/about" element={<About />} />
-
-           
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </div>
-      </div>
-
-      <Footer>
-        <p>© 2025 Church Name. All rights reserved.</p>
-      </Footer>
-    </div>
+        
+        <Route
+          path="/dashboard"
+          element={
+            <div className="dashboard-layout">
+              <Sidebar />
+              <div className="dashboard-content">
+                <Dashboard />
+              </div>
+            </div>
+          }
+        />
+      </Routes>
+    </Router>
   );
 }
 

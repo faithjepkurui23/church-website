@@ -18,13 +18,13 @@ function Header() {
         <NavLink to="/dashboard">
           Dashboard
         </NavLink>
-        <NavLink to="/sermons">
+        <NavLink to="/about">
           Sermons
         </NavLink>
         <NavLink to="/events">
           Events
         </NavLink>
-        <NavLink to="/about">
+        <NavLink to="/sermons">
           About
         </NavLink>
         <NavLink to="/contact">

@@ -40,3 +40,20 @@
 .read-the-docs {
   color: #888;
 }
+/*hapa*/
+.main-content {
+  padding-top: 80px; /* Adjust based on your Header height */
+  min-height: 80vh;
+}
+
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.dashboard-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+

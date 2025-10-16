@@ -1,13 +1,10 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import Card from '../components/Card';
 import './Home.css';
 
 function Home() {
   return (
     <>
-      <Header />
       <section className="home-hero">
         <div className="hero-content">
           <h1>Welcome to Our Church</h1>
@@ -33,8 +30,6 @@ function Home() {
           image="https://via.placeholder.com/400x200"
         />
       </section>
-
-      <Footer />
     </>
   );
 }

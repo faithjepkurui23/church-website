@@ -1,14 +1,11 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+
 import Card from '../components/Card';
 import './Events.css';
 
 function Events() {
   return (
-    <>
-      <Header />
-      <section className="events-section">
+      <div className="events-section">
         <h1>Upcoming Events</h1>
         <div className="events-grid">
           <Card 
@@ -27,9 +24,9 @@ function Events() {
             image="https://via.placeholder.com/400x200"
           />
         </div>
-      </section>
-      <Footer />
-    </>
+
+     
+      </div>
   );
 }
 

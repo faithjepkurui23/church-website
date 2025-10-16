@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+
 import './Contact.css';
 
 function Contact() {
@@ -22,9 +21,7 @@ function Contact() {
   };
 
   return (
-    <>
-      <Header />
-      <section className="contact-section">
+      <div className="contact-section">
         <h1>Contact Us</h1>
         <form className="contact-form" onSubmit={handleSubmit}>
           <input 
@@ -52,9 +49,9 @@ function Contact() {
           ></textarea>
           <button type="submit">Send Message</button>
         </form>
-      </section>
-      <Footer />
-    </>
+  
+      </div>
+  
   );
 }
 

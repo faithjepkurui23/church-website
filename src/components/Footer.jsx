@@ -13,8 +13,8 @@ function Footer() {
         <div className="footer-links">
           <a href="/about">About</a>
           <a href="/events">Events</a>
-          <a href="/contact">Contact</a>
           <a href="/sermons">Sermons</a>
+          <a href="/contact">Contact</a>
         </div>
 
         <div className="footer-social">
