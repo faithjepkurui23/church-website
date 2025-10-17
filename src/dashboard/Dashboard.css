@@ -1,95 +1,92 @@
-/* Make sure the page takes full height to keep footer at bottom */
-.sermon-page {
+.dashboard-page {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   background: linear-gradient(to bottom, royalblue 40%, white 100%);
-  color: white;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
 }
 
-/* Header styling */
-.sermon-header {
+/* Header */
+.dashboard-header {
+  background-color: black;
   text-align: center;
   padding: 3rem 1rem;
-  background-color: black;
 }
 
-.sermon-header h1 {
-  font-size: 2.5rem;
+.dashboard-header h1 {
   color: orange;
+  font-size: 2.5rem;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
-.sermon-header p {
-  font-size: 1.1rem;
+.dashboard-header p {
   color: white;
+  font-size: 1.1rem;
   margin-top: 0.5rem;
 }
 
-/* Main sermon content styling */
-.sermon-content {
-  flex: 1; /* Push footer down */
+/* Content Area */
+.dashboard-content {
+  flex: 1;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   padding: 2rem;
   justify-items: center;
 }
 
-/* Card styling */
-.sermon-card {
+/* Card Styling */
+.dashboard-card {
   background-color: white;
   color: black;
   border-left: 6px solid orange;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   padding: 1.5rem;
-  width: 100%;
-  max-width: 400px;
+  max-width: 350px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.sermon-card:hover {
+.dashboard-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
 }
 
-.sermon-card h2 {
+.dashboard-card h2 {
   color: royalblue;
   font-size: 1.4rem;
   margin-bottom: 0.5rem;
 }
 
-.sermon-card p {
+.dashboard-card p {
   font-size: 1rem;
-  color: black;
   margin-bottom: 1rem;
 }
 
-/* Button styling */
-.sermon-btn {
+/* Button */
+.dash-btn {
   background-color: orange;
   color: white;
   border: none;
-  padding: 0.7rem 1.5rem;
+  padding: 0.6rem 1.2rem;
   border-radius: 25px;
-  cursor: pointer;
-  font-size: 1rem;
   font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
   transition: background 0.3s ease;
 }
 
-.sermon-btn:hover {
+.dash-btn:hover {
   background-color: royalblue;
 }
 
-/* Footer positioning */
+/* Footer stays at the bottom */
 footer {
   background-color: black;
   color: white;
   text-align: center;
   padding: 1rem 0;
-  margin-top: auto; /* ensures footer stays at bottom */
+  margin-top: auto;
 }

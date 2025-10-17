@@ -1,15 +1,98 @@
-.Events-section {
-  padding: 3rem 2rem;
+/* SECTION CONTAINER */
+.events-section {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, white 40%, royalblue 100%);
+  padding: 4rem 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.Events-section h1 {
+/* HEADER */
+.events-header {
   text-align: center;
-  margin-bottom: 2rem;
-  color: var(--primary-blue);
+  margin-bottom: 3rem;
 }
 
-.Events-grid {
+.events-header h1 {
+  font-size: 2.5rem;
+  color: orange;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.events-header p {
+  font-size: 1.2rem;
+  color: black;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* GRID LAYOUT */
+.events-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* CARD OVERRIDES (to make them consistent) */
+.events-grid .card {
+  background-color: white;
+  color: black;
+  border: 3px solid royalblue;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.events-grid .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  border-color: orange;
+}
+
+/* CARD TITLE & DESCRIPTION */
+.events-grid .card h2 {
+  color: royalblue;
+  font-size: 1.4rem;
+  margin-top: 0.5rem;
+}
+
+.events-grid .card p {
+  font-size: 1rem;
+  color: black;
+}
+
+/* CARD IMAGE */
+.events-grid .card img {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 768px) {
+  .events-header h1 {
+    font-size: 2rem;
+  }
+
+  .events-header p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .events-section {
+    padding: 2rem 1rem;
+  }
+
+  .events-grid {
+    gap: 1.5rem;
+  }
 }

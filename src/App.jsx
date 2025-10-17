@@ -10,13 +10,14 @@ import About from "./pages/About";
 import Sermons from "./pages/Sermons";
 import Events from "./pages/Events";
 import Contact from "./pages/Contact";
-import Dashboard from "./pages/Dashboard";
+
+import Dashboard from "./dashboard/Dashboard";
 
 function App() {
   return (
     <Router>
       <Routes>
-       
+        {/* 🏠 Home page */}
         <Route
           path="/"
           element={
@@ -30,7 +31,6 @@ function App() {
           }
         />
 
-        
         <Route
           path="/home"
           element={
@@ -44,7 +44,7 @@ function App() {
           }
         />
 
-        
+        {/* ℹ️ About page */}
         <Route
           path="/about"
           element={
@@ -58,7 +58,7 @@ function App() {
           }
         />
 
-        
+        {/* 📅 Events page */}
         <Route
           path="/events"
           element={
@@ -72,7 +72,7 @@ function App() {
           }
         />
 
-        
+        {/* 📖 Sermons page */}
         <Route
           path="/sermons"
           element={
@@ -86,6 +86,7 @@ function App() {
           }
         />
 
+        {/* 📞 Contact page */}
         <Route
           path="/contact"
           element={
@@ -99,7 +100,7 @@ function App() {
           }
         />
 
-        
+        {/* 🧭 Dashboard layout */}
         <Route
           path="/dashboard"
           element={

@@ -13,8 +13,8 @@ function Sidebar() {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/About">
-            About us
+          <NavLink to="/about">   {/* ✅ lowercase */}
+            About Us
           </NavLink>
         </li>
         <li>
@@ -23,7 +23,7 @@ function Sidebar() {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/Sermons">
+          <NavLink to="/sermons"> {/* ✅ lowercase */}
             Sermons
           </NavLink>
         </li>

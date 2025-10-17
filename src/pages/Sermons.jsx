@@ -1,30 +1,35 @@
-import React from 'react';
-import Card from '../components/Card';
-import './Sermons.css';
+import React, { useEffect, useState } from 'react';
 
 function Sermons() {
-  return (
-    <section className="sermons-section">
-      <h1>Latest Sermons</h1>
+  const [sermons, setSermons] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-      <div className="sermons-grid">
-        <Card 
-          title="Faith Over Fear" 
-          description="A sermon about trusting God in difficult times."
-          image="https://via.placeholder.com/400x200"
-        />
-        <Card 
-          title="Power of Prayer" 
-          description="Discover how prayer changes everything."
-          image="https://via.placeholder.com/400x200"
-        />
-        <Card 
-          title="Love One Another" 
-          description="Living in love as a body of Christ."
-          image="https://via.placeholder.com/400x200"
-        />
-      </div>
-    </section>
+  useEffect(() => {
+    fetch('http://localhost:5000/api/sermons') // 👈 must match your backend URL
+      .then(response => response.json())
+      .then(data => {
+        setSermons(data);
+        setLoading(false);
+      })
+      .catch(error => {
+        console.error('Error fetching sermons:', error);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) return <p>Loading sermons...</p>;
+
+  return (
+    <div>
+      <h2>Sermons</h2>
+      <ul>
+        {sermons.map(sermon => (
+          <li key={sermon.id}>
+            {sermon.title} - {sermon.preacher} ({sermon.date})
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 
