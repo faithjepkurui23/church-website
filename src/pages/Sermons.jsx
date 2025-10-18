@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import Avatar from '../components/AvatarTopRight'; // your existing avatar component
+import './Sermons.css';
 
 function Sermons() {
   const [sermons, setSermons] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/sermons') // 👈 must match your backend URL
+    fetch('http://localhost:5000/api/sermons')
       .then(response => response.json())
       .then(data => {
         setSermons(data);
@@ -20,7 +22,12 @@ function Sermons() {
   if (loading) return <p>Loading sermons...</p>;
 
   return (
-    <div>
+    <div className="sermons-page">
+      {/* Avatar positioned top-right */}
+      <div className="sermons-avatar-wrapper">
+        <Avatar />
+      </div>
+
       <h2>Sermons</h2>
       <ul>
         {sermons.map(sermon => (
@@ -34,3 +41,4 @@ function Sermons() {
 }
 
 export default Sermons;
+

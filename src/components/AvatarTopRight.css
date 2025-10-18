@@ -1,0 +1,23 @@
+.avatar-top-right {
+  position: fixed;
+  top: 20px;           /* distance from top */
+  right: 90px;         /* leave space for buttons like "Donate" on the right */
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #2e3cff, #ff7a00);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  cursor: pointer;
+  z-index: 999;        /* ensure it is on top of normal content but below modals if any */
+  transition: transform 0.2s ease;
+}
+
+.avatar-top-right:hover {
+  transform: scale(1.1);
+}

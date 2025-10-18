@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import AvatarTopRight from '../components/AvatarTopRight'; // your existing top-right avatar
 import './Contact.css';
 
 function Contact() {
@@ -21,37 +21,38 @@ function Contact() {
   };
 
   return (
-      <div className="contact-section">
-        <h1>Contact Us</h1>
-        <form className="contact-form" onSubmit={handleSubmit}>
-          <input 
-            type="text" 
-            name="name" 
-            placeholder="Your Name" 
-            value={formData.name} 
-            onChange={handleChange} 
-            required
-          />
-          <input 
-            type="email" 
-            name="email" 
-            placeholder="Your Email" 
-            value={formData.email} 
-            onChange={handleChange} 
-            required
-          />
-          <textarea 
-            name="message" 
-            placeholder="Your Message" 
-            value={formData.message} 
-            onChange={handleChange} 
-            required
-          ></textarea>
-          <button type="submit">Send Message</button>
-        </form>
-  
-      </div>
-  
+    <div className="contact-page">
+      {/* Top-right avatar */}
+      <AvatarTopRight />
+
+      <h1>Contact Us</h1>
+      <form className="contact-form" onSubmit={handleSubmit}>
+        <input 
+          type="text" 
+          name="name" 
+          placeholder="Your Name" 
+          value={formData.name} 
+          onChange={handleChange} 
+          required
+        />
+        <input 
+          type="email" 
+          name="email" 
+          placeholder="Your Email" 
+          value={formData.email} 
+          onChange={handleChange} 
+          required
+        />
+        <textarea 
+          name="message" 
+          placeholder="Your Message" 
+          value={formData.message} 
+          onChange={handleChange} 
+          required
+        ></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
   );
 }
 
